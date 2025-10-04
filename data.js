@@ -29,17 +29,7 @@ const projects = [
     imageUrl:
       "https://i.ytimg.com/vi/wyzV0Fr7aLA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCO1ngDfwAHX-B7gzzbLt-5UwuVbg",
     detailUrl: "#",
-  },
-  {
-    id: 4,
-    title: "Digital Twins for Logistics",
-    description:
-      "Engineered simulation environments to create digital twins of real-world logistics and engineering systems, supporting Reinforcement Learning algorithm testing.",
-    tags: ["Simulation", "Reinforcement Learning", "Python", "AI"],
-    imageUrl:
-      "https://research.aimultiple.com/wp-content/uploads/2020/08/digital-twin-applications.png",
-    detailUrl: "#",
-  },
+  }
 ];
 
 const blogs = [
