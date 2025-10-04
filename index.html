@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Muhtasim Srijon - Data Science Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        .accent {
+            color: #00f5ff;
+        }
+        .card-bg {
+            background-color: #111111;
+        }
+        /* Custom styles for terminal */
+        .terminal {
+            font-family: monospace;
+            white-space: pre;
+        }
+        /* Progress bar */
+        .progress-bar {
+            height: 4px;
+            background-color: #00f5ff;
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-[#0a0a0a] z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold accent">Al Muhtasim Srijon</a>
+            <ul class="flex space-x-6">
+                <li><a href="#hero" class="hover:accent">Home</a></li>
+                <li><a href="#about" class="hover:accent">About</a></li>
+                <li><a href="#experience" class="hover:accent">Experience</a></li>
+                <li><a href="#projects" class="hover:accent">Projects</a></li>
+                <li><a href="#skills" class="hover:accent">Skills</a></li>
+                <li><a href="#blog" class="hover:accent">Blog</a></li>
+                <li><a href="#contact" class="hover:accent">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center">
+        <!-- Background Canvas for Data Stream Visualization -->
+        <canvas id="data-stream" class="absolute top-0 left-0 w-full h-full" style="opacity: 0.5;"></canvas>
+        <div class="text-center z-10" data-aos="fade-up">
+            <h1 class="text-5xl font-bold mb-4">Al Muhtasim Srijon</h1>
+            <p class="text-2xl mb-6">MSc Data Science Candidate @ TUHH</p>
+            <div class="terminal text-left mx-auto w-96 text-green-500 bg-black p-4 rounded">
+                <span id="terminal-text"></span><span class="animate-blink">|</span>
+            </div>
+            <p id="visitor-counter" class="mt-4 text-sm"></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 container mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-8 text-center accent">About Me</h2>
+        <p class="max-w-3xl mx-auto text-lg">
+            I aim to become a data-driven decision maker, leveraging advanced analytics and machine learning to solve real-world challenges. Coming from a software engineering background with hands-on experience in Python, SQL, and AI/ML frameworks, I am actively seeking a working student position or internship that bridges my skills in AI/ML engineering, data analytics, or predictive modeling. My goal is to contribute to projects that bridge AI innovation, data analysis, predictive modeling, or process automation. Equally important is my commitment to integrating into Germany’s professional culture; through advancing my German language skills and embracing collaborative, precision-driven work ethics.
+        </p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-[#111111]" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center accent">Professional Experience</h2>
+            <div class="space-y-8">
+                <!-- Experience Items -->
+                <div class="flex items-start">
+                    <div class="w-1/4 text-right pr-4">
+                        <p class="font-bold">Aug 2025 – Present</p>
+                    </div>
+                    <div class="w-3/4">
+                        <h3 class="text-xl font-semibold">Student Assistant, Institut für Technische Logistik, TUHH</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Engineered simulation environments to create digital twins of real-world logistics and engineering systems.</li>
+                            <li>Supported the research team in implementing and testing Reinforcement Learning algorithms to train AI agents within these simulations.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add other experiences similarly -->
+                <div class="flex items-start">
+                    <div class="w-1/4 text-right pr-4">
+                        <p class="font-bold">Oct 2025 – Present</p>
+                    </div>
+                    <div class="w-3/4">
+                        <h3 class="text-xl font-semibold">Student Tutor, Institute for Algorithms and Complexity, TUHH</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Led tutorials for Algorithmen und Datenstrukturen course, guiding students through complex topics.</li>
+                            <li>Assisted students with practical implementation, code debugging, and understanding algorithmic theory.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="w-1/4 text-right pr-4">
+                        <p class="font-bold">Sep 2025 – Oct 2025</p>
+                    </div>
+                    <div class="w-3/4">
+                        <h3 class="text-xl font-semibold">Student Tutor, Institute of Mathematics, TUHH</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Conducted exercise classes for Vorkurs Mathematik, reinforcing core concepts for incoming students.</li>
+                            <li>Facilitated problem-solving sessions and provided individualized support.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="w-1/4 text-right pr-4">
+                        <p class="font-bold">Nov 2023 – Jul 2024</p>
+                    </div>
+                    <div class="w-3/4">
+                        <h3 class="text-xl font-semibold">Lecturer, Uttara University</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Delivered advanced coursework in machine learning, data structures, and algorithms to 250+ students.</li>
+                            <li>Redesigned 4 course curriculums under OBE framework, integrating hands-on projects.</li>
+                            <li>Introduced flipped classroom model, increasing exam results by 22%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="w-1/4 text-right pr-4">
+                        <p class="font-bold">Oct 2023 – Nov 2023</p>
+                    </div>
+                    <div class="w-3/4">
+                        <h3 class="text-xl font-semibold">Apprentice, Berger Paints Bangladesh Ltd</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Developed custom SharePoint solutions to automate inventory and CRM workflows, reducing manual time by 25 hours/month.</li>
+                            <li>Modernized legacy systems with AngularJS and SharePoint APIs, improving responsiveness by 40%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="w-1/4 text-right pr-4">
+                        <p class="font-bold">May 2022 – Aug 2022</p>
+                    </div>
+                    <div class="w-3/4">
+                        <h3 class="text-xl font-semibold">Intern, Streams Tech Ltd</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Developed scalable mobile app for railroad management using Angular/Ionic, adopted by 5,000+ users.</li>
+                            <li>Contributed to migration of legacy modules to Angular 12, reducing errors by 65%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 container mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-8 text-center accent">Projects</h2>
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-[#111111]" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center accent">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Programming</h3>
+                    <ul id="programming-skills" class="space-y-4"></ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Frameworks</h3>
+                    <ul id="framework-skills" class="space-y-4"></ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Tools</h3>
+                    <ul id="tools-skills" class="space-y-4"></ul>
+                </div>
+            </div>
+            <div id="skill-log" class="mt-8 p-4 bg-black rounded text-green-500 font-mono hidden"></div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 container mx-auto px-4" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-8 text-center accent">Blog</h2>
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#111111]" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center accent">Contact</h2>
+            <form action="https://formspree.io/f/{your-form-id}" method="POST" class="max-w-lg mx-auto space-y-4">
+                <input type="text" name="name" placeholder="Name" class="w-full p-4 bg-[#0a0a0a] border border-gray-700 rounded">
+                <input type="email" name="_replyto" placeholder="Email" class="w-full p-4 bg-[#0a0a0a] border border-gray-700 rounded">
+                <textarea name="message" placeholder="Message" class="w-full p-4 bg-[#0a0a0a] border border-gray-700 rounded h-32"></textarea>
+                <button type="submit" class="w-full p-4 bg-[#00f5ff] text-black font-bold rounded">Send Message</button>
+            </form>
+            <div class="mt-8 text-center">
+                <p>Email: al.srijon@tuhh.de</p>
+                <p>Phone: +4915560749895</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/al-muhtasim-srijon" class="accent">al-muhtasim-srijon</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-[#111111] p-8 rounded-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-2xl">&times;</button>
+            <h2 id="modal-title" class="text-3xl font-bold mb-4 accent"></h2>
+            <p id="modal-date" class="text-sm text-gray-400 mb-4"></p>
+            <div id="modal-content" class="prose prose-invert"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Terminal Typing Animation
+        const terminalText = document.getElementById('terminal-text');
+        const message = '> git commit -m "Bridging the gap between data and decisions."';
+        let i = 0;
+        function typeWriter() {
+            if (i < message.length) {
+                terminalText.innerHTML += message.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        typeWriter();
+
+        // Global Visitor Counter using JSONBin.io
+        (async function() {
+            try {
+                // Fetch current count
+                const getResponse = await fetch('https://api.jsonbin.io/v3/b/68e019d4d0ea881f40944e19/latest', {
+                    headers: {
+                        'X-Master-Key': '$2a$10$Cg2ssSgg.dmAl0qG7ZlqmeMfCOcx3aMjb9O7C/UDYs8WDdqUJNwzy'
+                    }
+                });
+                const data = await getResponse.json();
+                let visitorCount = data.record.count || 0;
+
+                // Increment and update
+                visitorCount++;
+                await fetch('https://api.jsonbin.io/v3/b/68e019d4d0ea881f40944e19', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': '$2a$10$Cg2ssSgg.dmAl0qG7ZlqmeMfCOcx3aMjb9O7C/UDYs8WDdqUJNwzy'
+                    },
+                    body: JSON.stringify({ count: visitorCount })
+                });
+
+                // Display
+                document.getElementById('visitor-counter').innerText = `You are data point #${visitorCount} in my ongoing research on awesome portfolio visitors.`;
+            } catch (error) {
+                console.error('Visitor counter error:', error);
+                document.getElementById('visitor-counter').innerText = 'You are data point #? in my ongoing research on awesome portfolio visitors. (Counter offline)';
+            }
+        })();
+
+        // Data Stream Visualization (simple particles)
+        const canvas = document.getElementById('data-stream');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let particles = [];
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = '#00f5ff';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        for (let j = 0; j < 100; j++) {
+            particles.push(new Particle());
+        }
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+        // React to mouse
+        canvas.addEventListener('mousemove', e => {
+            particles.forEach(p => {
+                const dx = e.clientX - p.x;
+                const dy = e.clientY - p.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 100) {
+                    p.speedX += dx / 100;
+                    p.speedY += dy / 100;
+                }
+            });
+        });
+
+        // Render Projects
+        const projectsGrid = document.getElementById('projects-grid');
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'card-bg p-4 rounded shadow-md';
+            card.innerHTML = `
+                <img src="${project.imageUrl}" alt="${project.title}" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
+                <p class="mb-4">${project.description}</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    ${project.tags.map(tag => `<span class="bg-[#00f5ff] text-black px-2 py-1 rounded text-sm">${tag}</span>`).join('')}
+                </div>
+                <a href="${project.detailUrl}" class="accent">View Details</a>
+            `;
+            projectsGrid.appendChild(card);
+        });
+
+        // Skills Data
+        const programming = ['Python', 'JavaScript', 'SQL', 'R', 'C++', 'Java'];
+        const frameworks = ['React', 'Angular', 'Angular JS', 'Jest', 'Cypress'];
+        const tools = ['Docker', 'Postman', 'Figma', 'Microsoft Sharepoint', 'Power BI'];
+
+        function renderSkills(list, id) {
+            const ul = document.getElementById(id);
+            list.forEach(skill => {
+                const li = document.createElement('li');
+                li.className = 'cursor-pointer hover:accent';
+                li.innerText = skill;
+                li.addEventListener('mouseover', () => showSkillLog(skill));
+                ul.appendChild(li);
+            });
+        }
+        renderSkills(programming, 'programming-skills');
+        renderSkills(frameworks, 'framework-skills');
+        renderSkills(tools, 'tools-skills');
+
+        function showSkillLog(skill) {
+            const log = document.getElementById('skill-log');
+            log.classList.remove('hidden');
+            log.innerHTML = `> Importing ${skill.toLowerCase()}... Done.<br>> Training model on 10,000 rows... Loss: 0.05<br>> Skill Level: 95%`;
+            // Simulate progress
+            // You can add a progress bar element if desired
+        }
+
+        // Render Blogs with View More buttons
+        const blogGrid = document.getElementById('blog-grid');
+        const modal = document.getElementById('blog-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDate = document.getElementById('modal-date');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+
+        blogs.forEach((blog, index) => {
+            const card = document.createElement('div');
+            card.className = 'card-bg p-4 rounded shadow-md';
+            card.innerHTML = `
+                <h3 class="text-xl font-semibold mb-2">${blog.title}</h3>
+                <p class="mb-2">${blog.excerpt}</p>
+                <p class="text-sm text-gray-400">${blog.readTime} • ${blog.date}</p>
+                <button class="view-more accent mt-4 block" data-index="${index}">View More</button>
+            `;
+            blogGrid.appendChild(card);
+        });
+
+                // Function to parse Markdown images in content
+        function parseContent(content) {
+            // Replace image syntax: ![alt](src|caption) or ![alt](src)
+            let parsed = content
+                .replace(/\!\[(.*?)\]\((.*?)(?:\|(.*?))?\)/g, (match, alt, src, caption) => {
+                    const imgHtml = `<img src="${src}" alt="${alt}" class="max-w-full h-auto rounded mx-auto block my-4 shadow-md">`;
+                    return caption ? `${imgHtml}<p class="text-sm text-gray-400 italic text-center mt-2">${caption}</p>` : imgHtml;
+                })
+                // Split into paragraphs and handle line breaks
+                .split('\n\n')
+                .map(para => `<p>${para.replace(/\n/g, '<br>')}</p>`)
+                .join('');
+            return parsed;
+        }
+
+        // Modal functionality
+        document.querySelectorAll('.view-more').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const index = e.target.dataset.index;
+                const blog = blogs[index];
+                modalTitle.innerText = blog.title;
+                modalDate.innerText = `${blog.readTime} • ${blog.date}`;
+                modalContent.innerHTML = parseContent(blog.fullContent);
+                modal.classList.remove('hidden');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+
+        // Contact Form - Now using Formspree backend
+        // The submit event listener is removed as Formspree handles the submission
+    </script>
+</body>
+</html>
